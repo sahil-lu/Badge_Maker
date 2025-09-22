@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import BadgePreview from '../components/BadgePreview';
 import html2canvas from 'html2canvas';
 
@@ -125,7 +126,34 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <>
+      <Head>
+        <title>BadgeBeam - LISA Ai for HR Badge Maker</title>
+        <meta name="description" content="Create and share your LISA Ai for HR workshop badges. Mint professional badges and share them on LinkedIn." />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://badge-maker-phi.vercel.app/" />
+        <meta property="og:title" content="BadgeBeam - LISA Ai for HR Badge Maker" />
+        <meta property="og:description" content="Create and share your LISA Ai for HR workshop badges. Mint professional badges and share them on LinkedIn." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=630&fit=crop&crop=center&auto=format&q=80" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="LISA Ai for HR" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://badge-maker-phi.vercel.app/" />
+        <meta property="twitter:title" content="BadgeBeam - LISA Ai for HR Badge Maker" />
+        <meta property="twitter:description" content="Create and share your LISA Ai for HR workshop badges. Mint professional badges and share them on LinkedIn." />
+        <meta property="twitter:image" content="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=630&fit=crop&crop=center&auto=format&q=80" />
+        
+        {/* Additional meta tags */}
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://badge-maker-phi.vercel.app/" />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -281,6 +309,7 @@ const Home = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
