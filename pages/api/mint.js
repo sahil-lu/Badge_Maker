@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       console.log('No webhook URL configured, returning mock response for development');
       return res.status(200).json({
         image_url: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop&crop=center&auto=format&q=80',
-        share_url: `${process.env.NEXTAUTH_URL || 'https://badge-maker-phi.vercel.app'}/badge/${encodeURIComponent(name.trim())}`,
+        share_url: `${process.env.NEXTAUTH_URL || 'https://badge-maker-phi.vercel.app'}/test-badge`,
         name: name.trim(),
         role: role ? role.trim() : '',
         profile_image: image || null,
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
     console.log('Returning mock response due to error');
     return res.status(200).json({
       image_url: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=500&fit=crop&crop=center&auto=format&q=80',
-      share_url: `${process.env.NEXTAUTH_URL || 'https://badge-maker-phi.vercel.app'}/badge/${encodeURIComponent(name.trim())}`,
+      share_url: `${process.env.NEXTAUTH_URL || 'https://badge-maker-phi.vercel.app'}/test-badge`,
       name: name.trim(),
       role: role ? role.trim() : '',
       profile_image: image || null,
