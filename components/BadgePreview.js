@@ -1,12 +1,6 @@
 const BadgePreview = ({ name = "Your Name", role = "", image = null }) => {
   return (
     <div className="w-72 h-96 mx-auto relative">
-      {/* Badge Pin/Clasp */}
-      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="w-8 h-6 bg-gradient-to-b from-gray-300 to-gray-400 rounded-t-lg border border-gray-500 shadow-lg">
-          <div className="w-6 h-4 bg-gradient-to-b from-gray-200 to-gray-300 rounded-t-lg mx-auto mt-1 border border-gray-400"></div>
-        </div>
-      </div>
       
       {/* Main Badge */}
       <div className="w-full h-full bg-gradient-to-br from-amber-200 via-yellow-300 to-amber-400 rounded-3xl shadow-2xl border-4 border-amber-500 relative overflow-hidden">
@@ -19,14 +13,14 @@ const BadgePreview = ({ name = "Your Name", role = "", image = null }) => {
         {/* Inner content area */}
         <div className="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
           {/* Organization Header */}
-          <div className="mb-4">
+          <div className="mb-4 mt-4">
             <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-amber-100 px-4 py-2 rounded-full shadow-lg border border-amber-800">
               <span className="text-xs font-bold tracking-wide uppercase">
                 LISA Ai for HR
               </span>
             </div>
-          </div>
-          
+      </div>
+      
         {/* Profile Image */}
         {image && (
             <div className="mb-4 relative">
@@ -48,18 +42,18 @@ const BadgePreview = ({ name = "Your Name", role = "", image = null }) => {
         </h2>
           
           {/* Role */}
-        {role && (
-            <div className="mb-4">
+          {role && (
+            <div className="mb-1">
               <div className="bg-gradient-to-r from-amber-700 to-amber-800 text-amber-100 px-3 py-1 rounded-lg shadow-md border border-amber-900">
                 <span className="text-sm font-semibold">
-            {role}
+                  {role}
                 </span>
               </div>
             </div>
           )}
           
           {/* Logo Section - Bottom */}
-          <div className="mt-auto flex justify-center items-center gap-8">
+          <div className="mt-2 flex justify-center items-center gap-8">
             {/* LISA Logo */}
             <div className="w-20 h-12 flex items-center justify-center">
               <svg width="80" height="30" viewBox="0 0 590.7 217.2" className="w-full h-full">
